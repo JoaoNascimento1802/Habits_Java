@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/habits")
-@CrossOrigin(origins = "${frontend.url}")
+@CrossOrigin(origins = "https://front-habits-two.vercel.app")
 public class HabitController {
 
     @Autowired
