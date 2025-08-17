@@ -17,7 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/habits")
-@CrossOrigin(origins = "http://localhost:3000") // Permite requisições do front-end
+@CrossOrigin(origins = "${frontend.url}")
 public class HabitController {
 
     @Autowired
