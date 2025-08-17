@@ -27,8 +27,8 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Copia o arquivo .jar gerado no estágio anterior para o novo container
-# Lembre-se de verificar se o nome do seu .jar está correto
-COPY --from=build /app/target/habits-0.0.1-SNAPSHOT.jar app.jar
+# CORREÇÃO: O nome do arquivo agora está com 'H' maiúsculo para corresponder ao build.
+COPY --from=build /app/target/Habits-0.0.1-SNAPSHOT.jar app.jar
 
 # Expõe a porta que a aplicação vai usar dentro do container
 EXPOSE 10000
