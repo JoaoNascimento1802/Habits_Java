@@ -9,7 +9,7 @@ import java.util.List;
 
 
 @Entity
-public class Habits_Model {
+public class Habit {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,11 +23,9 @@ public class Habits_Model {
     @Column(name = "creation_date", nullable = false)
     private LocalDate creationDate;
 
-    // Um Hábito tem muitas Tarefas. Se um hábito for deletado, todas as suas tarefas também serão.
     @OneToMany(mappedBy = "habit", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Task> tasks = new ArrayList<>();
 
-    // Construtores
     public Habit() {
         this.creationDate = LocalDate.now();
     }
